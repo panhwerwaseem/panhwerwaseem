@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="1200" height="200" role="img" aria-label="How I build AI systems: request to agent to tools and knowledge to action">
+  <defs>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2140"/>
+      <stop offset="100%" stop-color="#0f1428"/>
+    </linearGradient>
+    <linearGradient id="rail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>
+      .f { font-family: 'Segoe UI', Inter, Roboto, Helvetica, Arial, sans-serif; }
+      .h { font-size: 16px; font-weight: 700; fill: #e0e7ff; }
+      .s { font-size: 11.5px; fill: #94a3b8; }
+      .card { fill: url(#card); stroke: #2b3357; stroke-width: 1.5; }
+      .card.hot { animation: ring 4.8s ease-in-out infinite; }
+      .c1 { animation-delay: 0s } .c2 { animation-delay: .9s } .c3 { animation-delay: 1.8s } .c4 { animation-delay: 2.7s } .c5 { animation-delay: 3.6s }
+      .rail { stroke: url(#rail); stroke-width: 4; fill: none; opacity: .7; }
+      .pkt { filter: url(#glow); }
+      .pk1 { animation: travel 4.8s linear infinite; }
+      .pk2 { animation: travel 4.8s linear infinite; animation-delay: 1.6s; }
+      .pk3 { animation: travel 4.8s linear infinite; animation-delay: 3.2s; }
+      .bars rect { animation: eq 1.2s ease-in-out infinite alternate; transform-origin: bottom; transform-box: fill-box; }
+      .bars rect:nth-child(2) { animation-delay: .2s } .bars rect:nth-child(3) { animation-delay: .4s } .bars rect:nth-child(4) { animation-delay: .6s }
+      .gear { animation: spin 6s linear infinite; transform-box: fill-box; transform-origin: center; }
+      .gear2 { animation: spin 4s linear infinite reverse; transform-box: fill-box; transform-origin: center; }
+      .check { stroke-dasharray: 40; stroke-dashoffset: 40; animation: draw 4.8s ease-out infinite; }
+      .blink { animation: blink 1s steps(2) infinite; }
+      @keyframes travel { 0% { transform: translateX(0); opacity: 0 } 5% { opacity: 1 } 95% { opacity: 1 } 100% { transform: translateX(960px); opacity: 0 } }
+      @keyframes ring { 0%,100% { stroke: #2b3357 } 12% { stroke: #22d3ee } 30% { stroke: #2b3357 } }
+      @keyframes eq { from { transform: scaleY(.3) } to { transform: scaleY(1) } }
+      @keyframes spin { to { transform: rotate(360deg) } }
+      @keyframes draw { 0%,78% { stroke-dashoffset: 40 } 90%,100% { stroke-dashoffset: 0 } }
+      @keyframes blink { to { opacity: 0 } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="200" rx="18" fill="#0b1020"/>
+
+  <!-- rail -->
+  <path class="rail" d="M120 100 H1080"/>
+  <g class="pkt">
+    <circle class="pk1" cx="120" cy="100" r="6" fill="#22d3ee"/>
+    <circle class="pk2" cx="120" cy="100" r="6" fill="#a78bfa"/>
+    <circle class="pk3" cx="120" cy="100" r="6" fill="#f472b6"/>
+  </g>
+
+  <!-- 1. Request -->
+  <g transform="translate(40,45)">
+    <rect class="card hot c1" width="160" height="110" rx="14"/>
+    <g class="f"><text class="h" x="16" y="34">Request</text><text class="s" x="16" y="56">user / event / API</text></g>
+    <g class="f" font-size="12" fill="#67e8f9" font-family="monospace"><text x="16" y="88">&gt; build it<tspan class="blink">_</tspan></text></g>
+  </g>
+
+  <!-- 2. Agent -->
+  <g transform="translate(280,45)">
+    <rect class="card hot c2" width="160" height="110" rx="14"/>
+    <g class="f"><text class="h" x="16" y="34">Agent</text><text class="s" x="16" y="56">plan · reason · route</text></g>
+    <g class="gear" transform="translate(118,80)">
+      <circle r="12" fill="none" stroke="#a78bfa" stroke-width="3" stroke-dasharray="4 3"/>
+      <circle r="4" fill="#a78bfa"/>
+    </g>
+  </g>
+
+  <!-- 3. Tools + Knowledge -->
+  <g transform="translate(520,45)">
+    <rect class="card hot c3" width="160" height="110" rx="14"/>
+    <g class="f"><text class="h" x="16" y="34">Tools + RAG</text><text class="s" x="16" y="56">MCP · APIs · vectors</text></g>
+    <g class="bars" transform="translate(96,96)">
+      <rect x="0"  y="-26" width="8" height="26" rx="2" fill="#22d3ee"/>
+      <rect x="12" y="-26" width="8" height="26" rx="2" fill="#a78bfa"/>
+      <rect x="24" y="-26" width="8" height="26" rx="2" fill="#f472b6"/>
+      <rect x="36" y="-26" width="8" height="26" rx="2" fill="#34d399"/>
+    </g>
+  </g>
+
+  <!-- 4. Cloud -->
+  <g transform="translate(760,45)">
+    <rect class="card hot c4" width="160" height="110" rx="14"/>
+    <g class="f"><text class="h" x="16" y="34">Cloud</text><text class="s" x="16" y="56">AWS · GCP · scale</text></g>
+    <g class="gear2" transform="translate(118,80)">
+      <circle r="12" fill="none" stroke="#22d3ee" stroke-width="3" stroke-dasharray="6 4"/>
+      <circle r="4" fill="#22d3ee"/>
+    </g>
+  </g>
+
+  <!-- 5. Outcome -->
+  <g transform="translate(1000,45)">
+    <rect class="card hot c5" width="160" height="110" rx="14"/>
+    <g class="f"><text class="h" x="16" y="34">Shipped</text><text class="s" x="16" y="56">measurable outcome</text></g>
+    <circle cx="118" cy="80" r="16" fill="none" stroke="#34d399" stroke-width="3"/>
+    <path class="check" d="M109 80 l6 6 l13 -13" fill="none" stroke="#34d399" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
