@@ -36,11 +36,6 @@
 
 <br>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=panhwerwaseem&show_icons=true&hide_border=true&bg_color=05070f&title_color=67e8f9&icon_color=c4b5fd&text_color=c7d2fe&ring_color=f9a8d4&include_all_commits=true&count_private=true&hide_title=true&hide_rank=false&card_width=560" height="180" alt="GitHub stats">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=panhwerwaseem&layout=compact&hide_border=true&bg_color=05070f&title_color=67e8f9&text_color=c7d2fe&langs_count=6&card_width=400" height="180" alt="Top languages">
-</p>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/panhwerwaseem/panhwerwaseem/output/github-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/panhwerwaseem/panhwerwaseem/output/github-snake.svg">

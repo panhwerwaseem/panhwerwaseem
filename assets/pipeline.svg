@@ -102,12 +102,12 @@
       <text class="f n" x="20" y="30">04</text>
       <text class="f h" x="20" y="58">Cloud</text>
       <text class="f s" x="20" y="80">AWS · GCP · scale</text>
-      <g class="cloud" transform="translate(112,100)">
+      <g transform="translate(112,100)"><g class="cloud">
         <path d="M14 36h40a14 14 0 0 0 2-27.8A20 20 0 0 0 18 14a11 11 0 0 0-4 22z" fill="none" stroke="#67e8f9" stroke-width="3" stroke-linejoin="round"/>
         <g fill="#c4b5fd">
           <circle class="node" cx="22" cy="24" r="3"/><circle class="node" cx="34" cy="24" r="3"/><circle class="node" cx="46" cy="24" r="3"/><circle class="node" cx="58" cy="24" r="3"/>
         </g>
-      </g>
+      </g></g>
     </g>
 
     <!-- 5 Shipped -->
