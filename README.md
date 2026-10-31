@@ -30,12 +30,6 @@
 
 <br>
 
-<p align="center">
-  <a href="https://meetactionmind.com/"><img src="assets/actionmind.svg" width="100%" alt="ActionMind AI — your AI teammate joins the meeting, captures decisions and executes tasks"></a>
-</p>
-
-<br>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/panhwerwaseem/panhwerwaseem/output/github-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/panhwerwaseem/panhwerwaseem/output/github-snake.svg">
