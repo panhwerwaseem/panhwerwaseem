@@ -1,142 +1,151 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="Muhammad Waseem Panhwar — Senior AI Solution Architect">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Muhammad Waseem Panhwar — Senior AI Solution Architect">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0b1020"/>
-      <stop offset="100%" stop-color="#141a33"/>
+      <stop offset="0" stop-color="#05070f"/><stop offset="1" stop-color="#0c1226"/>
     </linearGradient>
-    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#22d3ee" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    <linearGradient id="txt" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#67e8f9"><animate attributeName="stop-color" values="#67e8f9;#c4b5fd;#f9a8d4;#67e8f9" dur="7s" repeatCount="indefinite"/></stop>
+      <stop offset=".5" stop-color="#c4b5fd"><animate attributeName="stop-color" values="#c4b5fd;#f9a8d4;#67e8f9;#c4b5fd" dur="7s" repeatCount="indefinite"/></stop>
+      <stop offset="1" stop-color="#f9a8d4"><animate attributeName="stop-color" values="#f9a8d4;#67e8f9;#c4b5fd;#f9a8d4" dur="7s" repeatCount="indefinite"/></stop>
     </linearGradient>
-    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#22d3ee"/>
-      <stop offset="50%" stop-color="#a78bfa"/>
-      <stop offset="100%" stop-color="#f472b6"/>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="glowP" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+    <radialGradient id="aurA" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#7c3aed" stop-opacity=".75"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+    <radialGradient id="aurB" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#06b6d4" stop-opacity=".7"/><stop offset="1" stop-color="#06b6d4" stop-opacity="0"/></radialGradient>
+    <radialGradient id="aurC" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ec4899" stop-opacity=".5"/><stop offset="1" stop-color="#ec4899" stop-opacity="0"/></radialGradient>
+    <radialGradient id="core" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff"/><stop offset=".25" stop-color="#a5f3fc"/><stop offset=".6" stop-color="#7c3aed" stop-opacity=".6"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="28"/></filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#8b9cf7" stroke-opacity=".07"/></pattern>
+    <clipPath id="frame"><rect width="1200" height="420" rx="26"/></clipPath>
+    <path id="orb1" d="M0,-150 a150,150 0 1,1 -0.1,0 z"/>
+    <path id="orb2" d="M0,-105 a105,105 0 1,0 0.1,0 z"/>
+    <path id="orb3" d="M0,-60 a60,60 0 1,1 -0.1,0 z"/>
     <style>
-      .t  { font-family: 'Segoe UI', Inter, Roboto, Helvetica, Arial, sans-serif; }
-      .title { font-size: 54px; font-weight: 800; letter-spacing: -1px; fill: url(#title); }
-      .sub   { font-size: 20px; font-weight: 500; fill: #c7d2fe; }
-      .tag   { font-size: 13px; font-weight: 600; fill: #0b1020; }
-      .link  { stroke: #38bdf8; stroke-width: 1.6; fill: none; stroke-dasharray: 6 10; animation: flow 1.6s linear infinite; opacity: .75; }
-      .link.p { stroke: #a78bfa; animation-duration: 2.2s; }
-      .node  { fill: #0b1020; stroke: #22d3ee; stroke-width: 2; }
-      .node.p { stroke: #a78bfa; }
-      .pulse { fill: none; stroke: #22d3ee; stroke-width: 2; opacity: 0; animation: pulse 2.4s ease-out infinite; }
-      .pulse.p { stroke: #a78bfa; }
-      .orb   { animation: drift 9s ease-in-out infinite alternate; }
-      .orb2  { animation: drift 12s ease-in-out infinite alternate-reverse; }
-      .sweep { animation: sweep 6s linear infinite; }
-      .fade  { animation: fadeUp 1.1s ease-out both; }
-      .d1 { animation-delay: .15s } .d2 { animation-delay: .45s } .d3 { animation-delay: .75s } .d4 { animation-delay: 1.05s }
-      .pill { animation: pop .6s cubic-bezier(.2,.9,.3,1.4) both; transform-origin: center; }
-      .p1 { animation-delay: 1.2s } .p2 { animation-delay: 1.35s } .p3 { animation-delay: 1.5s } .p4 { animation-delay: 1.65s } .p5 { animation-delay: 1.8s }
-      .spin { animation: spin 14s linear infinite; transform-origin: 960px 170px; }
-      .spinR { animation: spin 22s linear infinite reverse; transform-origin: 960px 170px; }
-      .dot  { animation: twinkle 3s ease-in-out infinite; }
-      @keyframes flow   { to { stroke-dashoffset: -32; } }
-      @keyframes pulse  { 0% { r: 10; opacity: .8 } 100% { r: 34; opacity: 0 } }
-      @keyframes drift  { from { transform: translate(0,0) } to { transform: translate(60px, -30px) } }
-      @keyframes sweep  { from { transform: translateX(-1200px) } to { transform: translateX(1200px) } }
-      @keyframes fadeUp { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: translateY(0) } }
-      @keyframes pop    { from { opacity: 0; transform: scale(.6) } to { opacity: 1; transform: scale(1) } }
-      @keyframes spin   { to { transform: rotate(360deg) } }
-      @keyframes twinkle{ 0%,100% { opacity: .2 } 50% { opacity: 1 } }
+      .f{font-family:'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif}
+      .mono{font-family:'JetBrains Mono','Fira Code',Consolas,monospace}
+      .eyebrow{font-size:14px;letter-spacing:5px;font-weight:700;fill:#67e8f9}
+      .name{font-size:62px;font-weight:900;letter-spacing:-2px;fill:url(#txt)}
+      .typed{font-size:21px;fill:#dbe2ff;font-weight:500}
+      .caret{fill:#67e8f9;animation:blink 1s steps(2) infinite}
+      .chip{font-size:12.5px;font-weight:700;fill:#05070f}
+      .lbl{font-size:11px;font-weight:700;letter-spacing:1.5px;fill:#a5b4fc}
+      .in{animation:rise 1.2s cubic-bezier(.2,.8,.2,1) both}
+      .i1{animation-delay:.1s}.i2{animation-delay:.35s}.i3{animation-delay:.6s}.i4{animation-delay:.85s}
+      .chipA{animation:pop .7s cubic-bezier(.2,1.2,.3,1.1) both;transform-box:fill-box;transform-origin:center}
+      .k1{animation-delay:1.1s}.k2{animation-delay:1.25s}.k3{animation-delay:1.4s}.k4{animation-delay:1.55s}.k5{animation-delay:1.7s}
+      .line{transform-box:fill-box;transform-origin:left center;transform:scaleX(0)}
+      .l1{transform:scaleX(1);animation:type 12s steps(44) infinite both}
+      .l2{animation:type 12s steps(44) infinite both;animation-delay:4s}
+      .l3{animation:type 12s steps(44) infinite both;animation-delay:8s}
+      .a1{animation:driftA 14s ease-in-out infinite alternate}
+      .a2{animation:driftB 18s ease-in-out infinite alternate}
+      .a3{animation:driftC 11s ease-in-out infinite alternate}
+      .ring{fill:none;transform-box:fill-box;transform-origin:center}
+      .r1{animation:spin 26s linear infinite}
+      .r2{animation:spin 17s linear infinite reverse}
+      .r3{animation:spin 9s linear infinite}
+      .pulse{animation:pulse 2.6s ease-out infinite;transform-box:fill-box;transform-origin:center}
+      .beat{animation:beat 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+      .star{animation:tw 3.4s ease-in-out infinite}
+      .scan{animation:scan 7s linear infinite}
+      .shine{animation:shine 5s ease-in-out infinite}
+      @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+      @keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
+      @keyframes type{0%{transform:scaleX(0)}18%{transform:scaleX(1)}30%{transform:scaleX(1)}33.3%{transform:scaleX(0)}100%{transform:scaleX(0)}}
+      @keyframes blink{to{opacity:0}}
+      @keyframes driftA{from{transform:translate(0,0) scale(1)}to{transform:translate(120px,40px) scale(1.25)}}
+      @keyframes driftB{from{transform:translate(0,0) scale(1.1)}to{transform:translate(-90px,-50px) scale(.9)}}
+      @keyframes driftC{from{transform:translate(0,0)}to{transform:translate(60px,-70px)}}
+      @keyframes spin{to{transform:rotate(360deg)}}
+      @keyframes pulse{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.4);opacity:0}}
+      @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+      @keyframes tw{0%,100%{opacity:.15}50%{opacity:1}}
+      @keyframes scan{from{transform:translateY(-40px)}to{transform:translateY(460px)}}
+      @keyframes shine{0%{transform:translateX(-700px)}60%,100%{transform:translateX(900px)}}
     </style>
   </defs>
 
-  <!-- background -->
-  <rect width="1200" height="340" rx="22" fill="url(#bg)"/>
-  <g filter="url(#blur)">
-    <circle class="orb"  cx="160" cy="80"  r="120" fill="url(#glowP)"/>
-    <circle class="orb2" cx="1050" cy="300" r="140" fill="url(#glow)"/>
-  </g>
-  <rect class="sweep" width="1200" height="340" fill="url(#sweep)"/>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="420" fill="url(#bg)"/>
+    <rect width="1200" height="420" fill="url(#grid)"/>
 
-  <!-- subtle grid -->
-  <g stroke="#ffffff" stroke-opacity="0.04">
-    <path d="M0 60H1200M0 120H1200M0 180H1200M0 240H1200M0 300H1200"/>
-    <path d="M120 0V340M240 0V340M360 0V340M480 0V340M600 0V340M720 0V340M840 0V340M960 0V340M1080 0V340"/>
-  </g>
-
-  <!-- stars -->
-  <g fill="#e0e7ff">
-    <circle class="dot" cx="90"  cy="300" r="1.6"/>
-    <circle class="dot" cx="420" cy="40"  r="1.4" style="animation-delay:.7s"/>
-    <circle class="dot" cx="700" cy="310" r="1.8" style="animation-delay:1.4s"/>
-    <circle class="dot" cx="1150" cy="60" r="1.5" style="animation-delay:2.1s"/>
-    <circle class="dot" cx="560" cy="200" r="1.2" style="animation-delay:.3s"/>
-  </g>
-
-  <!-- text block -->
-  <g class="t">
-    <text class="sub fade d1" x="70" y="96" style="fill:#67e8f9;font-size:15px;letter-spacing:4px;font-weight:700">SENIOR AI SOLUTION ARCHITECT</text>
-    <text class="title fade d2" x="68" y="156">Muhammad Waseem Panhwar</text>
-    <text class="sub fade d3" x="70" y="196">I design &amp; ship production AI — agents, RAG, LLM platforms, cloud.</text>
-
-    <!-- pills -->
-    <g class="fade d4">
-      <g class="pill p1"><rect x="70"  y="228" width="104" height="30" rx="15" fill="#22d3ee"/><text class="tag" x="122" y="248" text-anchor="middle">AI Agents</text></g>
-      <g class="pill p2"><rect x="184" y="228" width="72"  height="30" rx="15" fill="#a78bfa"/><text class="tag" x="220" y="248" text-anchor="middle">RAG</text></g>
-      <g class="pill p3"><rect x="266" y="228" width="128" height="30" rx="15" fill="#f472b6"/><text class="tag" x="330" y="248" text-anchor="middle">LLM Platforms</text></g>
-      <g class="pill p4"><rect x="404" y="228" width="106" height="30" rx="15" fill="#34d399"/><text class="tag" x="457" y="248" text-anchor="middle">AWS · GCP</text></g>
-      <g class="pill p5"><rect x="520" y="228" width="140" height="30" rx="15" fill="#fbbf24"/><text class="tag" x="590" y="248" text-anchor="middle">15+ yrs Engineering</text></g>
-    </g>
-  </g>
-
-  <!-- agent network (right side) -->
-  <g>
-    <!-- orbit rings -->
-    <circle class="spinR" cx="960" cy="170" r="118" fill="none" stroke="#a78bfa" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="4 14"/>
-    <circle class="spin"  cx="960" cy="170" r="78"  fill="none" stroke="#22d3ee" stroke-opacity="0.3"  stroke-width="1" stroke-dasharray="2 10"/>
-
-    <!-- links -->
-    <path class="link"   d="M960 170 L860 110"/>
-    <path class="link p" d="M960 170 L1062 108"/>
-    <path class="link"   d="M960 170 L1078 190"/>
-    <path class="link p" d="M960 170 L1010 272"/>
-    <path class="link"   d="M960 170 L880 262"/>
-    <path class="link p" d="M960 170 L842 182"/>
-
-    <!-- outer nodes -->
-    <g>
-      <circle class="pulse"   cx="860"  cy="110" r="10"/>
-      <circle class="node"    cx="860"  cy="110" r="10"/>
-      <circle class="pulse p" cx="1062" cy="108" r="10" style="animation-delay:.4s"/>
-      <circle class="node p"  cx="1062" cy="108" r="10"/>
-      <circle class="pulse"   cx="1078" cy="190" r="10" style="animation-delay:.8s"/>
-      <circle class="node"    cx="1078" cy="190" r="10"/>
-      <circle class="pulse p" cx="1010" cy="272" r="10" style="animation-delay:1.2s"/>
-      <circle class="node p"  cx="1010" cy="272" r="10"/>
-      <circle class="pulse"   cx="880"  cy="262" r="10" style="animation-delay:1.6s"/>
-      <circle class="node"    cx="880"  cy="262" r="10"/>
-      <circle class="pulse p" cx="842"  cy="182" r="10" style="animation-delay:2s"/>
-      <circle class="node p"  cx="842"  cy="182" r="10"/>
+    <!-- aurora -->
+    <g filter="url(#soft)">
+      <ellipse class="a1" cx="200" cy="90" rx="260" ry="150" fill="url(#aurA)"/>
+      <ellipse class="a2" cx="1000" cy="360" rx="300" ry="170" fill="url(#aurB)"/>
+      <ellipse class="a3" cx="650" cy="420" rx="220" ry="110" fill="url(#aurC)"/>
     </g>
 
-    <!-- core -->
-    <circle cx="960" cy="170" r="40" fill="url(#glow)" opacity=".5"/>
-    <circle cx="960" cy="170" r="24" fill="#0b1020" stroke="url(#title)" stroke-width="3"/>
-    <text class="t" x="960" y="176" text-anchor="middle" font-size="16" font-weight="800" fill="#e0e7ff">AI</text>
+    <!-- scanline -->
+    <rect class="scan" x="0" y="0" width="1200" height="36" fill="url(#shine)" opacity=".08"/>
 
-    <!-- node labels -->
-    <g class="t" font-size="11" fill="#94a3b8" font-weight="600">
-      <text x="860"  y="92"  text-anchor="middle">Agents</text>
-      <text x="1062" y="90"  text-anchor="middle">RAG</text>
-      <text x="1104" y="194">MCP</text>
-      <text x="1010" y="294" text-anchor="middle">Cloud</text>
-      <text x="880"  y="284" text-anchor="middle">LLMs</text>
-      <text x="814"  y="186" text-anchor="end">Data</text>
+    <!-- stars -->
+    <g fill="#e0e7ff">
+      <circle class="star" cx="120" cy="360" r="1.6"/><circle class="star" cx="460" cy="48" r="1.3" style="animation-delay:.6s"/>
+      <circle class="star" cx="610" cy="300" r="1.8" style="animation-delay:1.2s"/><circle class="star" cx="300" cy="200" r="1.1" style="animation-delay:1.8s"/>
+      <circle class="star" cx="1120" cy="70" r="1.5" style="animation-delay:2.4s"/><circle class="star" cx="760" cy="120" r="1.2" style="animation-delay:3s"/>
+      <circle class="star" cx="1160" cy="380" r="1.4" style="animation-delay:.9s"/><circle class="star" cx="40" cy="60" r="1.2" style="animation-delay:2.1s"/>
+    </g>
+
+    <!-- ===== left: text ===== -->
+    <g class="f">
+      <text class="eyebrow in i1" x="72" y="118">SENIOR AI SOLUTION ARCHITECT</text>
+      <g class="in i2">
+        <text class="name" x="68" y="190">Muhammad Waseem</text>
+        <text class="name" x="68" y="252">Panhwar</text>
+        <rect class="shine" x="0" y="140" width="220" height="120" fill="url(#shine)" opacity=".35" style="mix-blend-mode:overlay"/>
+      </g>
+
+      <!-- typed lines -->
+      <g class="in i3">
+        <text class="mono" x="72" y="300" font-size="20" fill="#67e8f9">&gt;</text>
+        <g class="line l1"><text class="typed f" x="96" y="300">I build AI agents that actually ship to production.</text></g>
+        <g class="line l2"><text class="typed f" x="96" y="300">RAG · LangGraph · MCP · LLM platforms · AWS · GCP.</text></g>
+        <g class="line l3"><text class="typed f" x="96" y="300">Co-founder, ActionMind AI — meetings that run themselves.</text></g>
+        <rect class="caret" x="640" y="284" width="3" height="20"/>
+      </g>
+
+      <!-- chips -->
+      <g class="in i4">
+        <g class="chipA k1"><rect x="72" y="330" width="104" height="32" rx="16" fill="#67e8f9"/><text class="chip" x="124" y="351" text-anchor="middle">AI Agents</text></g>
+        <g class="chipA k2"><rect x="186" y="330" width="66" height="32" rx="16" fill="#c4b5fd"/><text class="chip" x="219" y="351" text-anchor="middle">RAG</text></g>
+        <g class="chipA k3"><rect x="262" y="330" width="130" height="32" rx="16" fill="#f9a8d4"/><text class="chip" x="327" y="351" text-anchor="middle">LLM Platforms</text></g>
+        <g class="chipA k4"><rect x="402" y="330" width="104" height="32" rx="16" fill="#6ee7b7"/><text class="chip" x="454" y="351" text-anchor="middle">AWS · GCP</text></g>
+        <g class="chipA k5"><rect x="516" y="330" width="130" height="32" rx="16" fill="#fcd34d"/><text class="chip" x="581" y="351" text-anchor="middle">15+ yrs shipping</text></g>
+      </g>
+    </g>
+
+    <!-- ===== right: neural core ===== -->
+    <g transform="translate(960,210)">
+      <circle r="190" fill="url(#core)" opacity=".18"/>
+      <!-- rings -->
+      <circle class="ring r1" r="150" stroke="#a78bfa" stroke-opacity=".35" stroke-width="1" stroke-dasharray="3 9"/>
+      <circle class="ring r2" r="105" stroke="#67e8f9" stroke-opacity=".45" stroke-width="1.2" stroke-dasharray="14 10"/>
+      <circle class="ring r3" r="60" stroke="#f9a8d4" stroke-opacity=".6" stroke-width="1.5" stroke-dasharray="2 6"/>
+      <!-- orbiters -->
+      <g filter="url(#glow)">
+        <circle r="6" fill="#67e8f9"><animateMotion dur="11s" repeatCount="indefinite"><mpath href="#orb1"/></animateMotion></circle>
+        <circle r="4" fill="#c4b5fd"><animateMotion dur="11s" begin="-5.5s" repeatCount="indefinite"><mpath href="#orb1"/></animateMotion></circle>
+        <circle r="5" fill="#f9a8d4"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#orb2"/></animateMotion></circle>
+        <circle r="3.5" fill="#6ee7b7"><animateMotion dur="7s" begin="-3.5s" repeatCount="indefinite"><mpath href="#orb2"/></animateMotion></circle>
+        <circle r="4" fill="#fff"><animateMotion dur="4s" repeatCount="indefinite"><mpath href="#orb3"/></animateMotion></circle>
+      </g>
+      <!-- labels on ring -->
+      <g class="f lbl">
+        <text x="0" y="-162" text-anchor="middle">AGENTS</text>
+        <text x="158" y="4" text-anchor="start">RAG</text>
+        <text x="0" y="172" text-anchor="middle">CLOUD</text>
+        <text x="-158" y="4" text-anchor="end">LLMs</text>
+        <text x="112" y="-112" text-anchor="start">MCP</text>
+        <text x="-112" y="122" text-anchor="end">DATA</text>
+      </g>
+      <!-- core -->
+      <circle class="pulse" r="30" fill="none" stroke="#67e8f9" stroke-width="2"/>
+      <circle class="pulse" r="30" fill="none" stroke="#c4b5fd" stroke-width="2" style="animation-delay:1.3s"/>
+      <circle class="beat" r="34" fill="url(#core)"/>
+      <text class="f" x="0" y="7" text-anchor="middle" font-size="19" font-weight="900" fill="#05070f">AI</text>
     </g>
   </g>
 </svg>
